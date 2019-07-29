@@ -27,4 +27,8 @@ class ApplicationController < Sinatra::Base
   erb :all_gossips, locals: {gossips: Gossip.all}
   end
 
+  get '/gossips/:id' do
+      "Voici la page #{params[:id]}"
+   end
+
 end

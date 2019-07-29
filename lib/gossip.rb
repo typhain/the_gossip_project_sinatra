@@ -23,4 +23,11 @@ class Gossip
     return all_gossips
   end
 
+  # def self.find(id)
+  #   CSV.parse(“CSV,data,String”) do |row|
+  #     # use row here...
+  # end
+
+  end
+
 end
