@@ -24,11 +24,11 @@ class ApplicationController < Sinatra::Base
   # end
 
   get '/all_gossips/' do
-  erb :all_gossips, locals: {gossips: Gossip.all}
+    erb :all_gossips, locals: {gossips: Gossip.all}
   end
 
-  get '/gossips/:id' do
-      "Voici la page #{params[:id]}"
-   end
+  get '/gossips/:index' do
+    erb :show, locals: {gossips: Gossip.find(params['index'].to_i), index: params['index']}
+    end
 
 end
